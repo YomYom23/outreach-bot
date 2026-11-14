@@ -1,0 +1,39 @@
+{
+ "data": {
+  "domain": "gen.test",
+  "emails": [
+   {
+    "value": "office@gen.test",
+    "type": "generic",
+    "confidence": 90,
+    "seniority": null,
+    "position": null,
+    "first_name": null,
+    "last_name": null,
+    "sources": [
+     {
+      "domain": "x",
+      "uri": "https://www.bbb.org/profile/x",
+      "extracted_on": "2026-01-01"
+     }
+    ]
+   },
+   {
+    "value": "pat@gen.test",
+    "type": "personal",
+    "confidence": 90,
+    "seniority": "junior",
+    "position": null,
+    "first_name": null,
+    "last_name": null,
+    "sources": [
+     {
+      "domain": "x",
+      "uri": "https://www.bbb.org/profile/x",
+      "extracted_on": "2026-01-01"
+     }
+    ]
+   }
+  ]
+ }
+}

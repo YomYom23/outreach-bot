@@ -1,0 +1,16 @@
+.env
+*.db
+*.db-wal
+*.db-shm
+*.db.bak*
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+trace-*.txt
+
+# Real business domains for live demos; kept local, not published.
+examples/tucson_demo.txt
+examples/my_seeds.txt

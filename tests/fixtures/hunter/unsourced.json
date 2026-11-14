@@ -1,0 +1,27 @@
+{
+ "data": {
+  "domain": "nosrc.test",
+  "emails": [
+   {
+    "value": "boss@nosrc.test",
+    "type": "personal",
+    "confidence": 90,
+    "seniority": "executive",
+    "position": "Owner",
+    "first_name": null,
+    "last_name": null,
+    "sources": []
+   },
+   {
+    "value": "info@nosrc.test",
+    "type": "generic",
+    "confidence": 90,
+    "seniority": null,
+    "position": null,
+    "first_name": null,
+    "last_name": null,
+    "sources": []
+   }
+  ]
+ }
+}

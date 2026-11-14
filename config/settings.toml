@@ -1,0 +1,98 @@
+# Every limit and switch lives here. Module docs refer to these keys.
+
+[run]
+target_qualified = 4
+max_research_rounds = 3
+batch_size = 10
+max_companies_examined_per_round = 30
+max_decisions = 20
+max_questions = 3
+max_exa_searches_per_round = 8
+exa_num_results = 10
+max_hunter_calls_per_run = 5
+rejected_retry_days = 90
+
+[fetch]
+extra_pages_per_company = 3
+page_text_chars = 6000
+snippet_chars = 200
+context_snippet_chars = 200
+max_redirects = 5
+connect_timeout_s = 5
+read_timeout_s = 10
+max_page_bytes = 2000000
+vendor_retry_attempts = 3
+per_host_delay_s = 1.0
+js_shell_min_chars = 500
+no_ai_min_ok_pages = 2
+# config.py refuses to start while this still contains <you>.
+user_agent = "OutreachBot/0.1 (+https://github.com/YomYom23/out-reach-bot)"
+
+[models]
+model_bulk = "claude-haiku-5-5"
+model_quality = "claude-opus-5-5"
+llm_validation_retries = 1
+anthropic_max_retries = 2
+
+[effort]
+parse = "low"
+intake_reply = "low"
+discovery = "low"
+triage = "low"
+judge = "medium"
+checklist = "medium"
+router = "medium"
+drafter = "medium"
+
+# Resized from the phase 3b measurements (docs/vendor_notes.md).
+[max_tokens]
+parse = 4000
+intake_reply = 1000
+discovery = 8000
+triage = 2000
+judge = 8000
+checklist = 8000
+router = 8000
+drafter = 16000
+
+# Dollars per million tokens (claude-api reference, 2026-11-03). Haiku 5.5 prices are for prompts up to 100K tokens.
+[prices.models.claude-haiku-5-5]
+input = 0.10
+output = 0.50
+
+[prices.models.claude-opus-5-5]
+input = 4.00
+output = 20.00
+
+[prices]
+# Measured in phase 3b: cost_dollars.total for 25 results with highlights (docs/vendor_notes.md).
+exa_dollars_per_call = 0.022
+hunter_credits_per_call = 1
+
+[mail]
+# Copy the host from the Mailtrap sandbox: Integration -> SMTP.
+mail_smtp_host = "sandbox.smtp.mailtrap.io"
+mail_smtp_port = 2525
+mail_starttls = true
+mail_host_allowlist = ["sandbox.smtp.mailtrap.io"]
+mail_test_recipient = "inbox@outreach.test"
+mail_from = "outreach-bot@outreach.test"
+# Free sandbox: 1 email per 10 s, 50 a month, keeps the last 10.
+mail_min_send_interval_s = 10
+
+[graph]
+recursion_margin = 50
+steps_per_company = 6
+steps_per_draft = 3
+outbox_passes = 3
+
+[editor]
+editor = ""
+editor_early_return_s = 2
+
+[paths]
+runs_db_path = "%LOCALAPPDATA%\\outreach-bot\\runs.db"
+memory_db_path = "%LOCALAPPDATA%\\outreach-bot\\memory.db"
+
+[other]
+default_router = "claude"

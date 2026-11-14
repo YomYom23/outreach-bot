@@ -1,0 +1,39 @@
+{
+ "data": {
+  "domain": "keystone.test",
+  "emails": [
+   {
+    "value": "john@keystone.test",
+    "type": "personal",
+    "confidence": 90,
+    "seniority": "executive",
+    "position": "Owner",
+    "first_name": "John",
+    "last_name": "Carver",
+    "sources": [
+     {
+      "domain": "x",
+      "uri": "https://www.bbb.org/profile/x",
+      "extracted_on": "2026-01-01"
+     }
+    ]
+   },
+   {
+    "value": "crew@keystone.test",
+    "type": "personal",
+    "confidence": 90,
+    "seniority": "junior",
+    "position": "Crew lead",
+    "first_name": null,
+    "last_name": null,
+    "sources": [
+     {
+      "domain": "x",
+      "uri": "https://www.bbb.org/profile/x",
+      "extracted_on": "2026-01-01"
+     }
+    ]
+   }
+  ]
+ }
+}

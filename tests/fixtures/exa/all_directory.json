@@ -1,0 +1,35 @@
+{
+ "results": [
+  {
+   "url": "https://best-roofers-directory.test/a",
+   "title": "Best Roofers in Tucson",
+   "highlights": [
+    "Compare roofers."
+   ]
+  },
+  {
+   "url": "https://top10-roofers.test/b",
+   "title": "Top 10 Roofing Companies",
+   "highlights": [
+    "Ranking."
+   ]
+  },
+  {
+   "url": "https://www.yelp.com/x",
+   "title": "Yelp",
+   "highlights": [
+    "reviews"
+   ]
+  },
+  {
+   "url": "https://www.angi.com/y",
+   "title": "Angi",
+   "highlights": [
+    "find pros"
+   ]
+  }
+ ],
+ "cost_dollars": {
+  "total": 0.022
+ }
+}

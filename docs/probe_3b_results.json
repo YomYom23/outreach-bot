@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-13",
+  "run_id": "probe-01M7AMJ2HDVHNB4NS8WSY4DBFG",
+  "avg_own_sites_per_search": 25,
+  "avg_own_sites_with_email": 18.13,
+  "decision": "GO",
+  "category": "company",
+  "exa_cost_per_call": 0.022,
+  "triage_tokens_avg": {
+    "input": 808,
+    "output": 65,
+    "max_output": 86
+  },
+  "triage_stop_reasons": [
+    "end_turn"
+  ],
+  "label_counts": {
+    "contractor_own_site": 134
+  },
+  "searches": [
+    {
+      "query": "roofing contractor in Tucson, AZ",
+      "city": "Tucson, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 16,
+      "cost": 0.022
+    },
+    {
+      "query": "roof repair company Tucson, AZ",
+      "city": "Tucson, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 18,
+      "cost": 0.022
+    },
+    {
+      "query": "residential roofer Tucson, AZ family owned",
+      "city": "Tucson, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 18,
+      "cost": 0.022
+    },
+    {
+      "query": "roof replacement contractor Tucson, AZ",
+      "city": "Tucson, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 16,
+      "cost": 0.022
+    },
+    {
+      "query": "local roofing company near Tucson, AZ",
+      "city": "Tucson, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 18,
+      "cost": 0.022
+    },
+    {
+      "query": "roofing contractor in Phoenix, AZ",
+      "city": "Phoenix, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 20,
+      "cost": 0.022
+    },
+    {
+      "query": "roof repair company Phoenix, AZ",
+      "city": "Phoenix, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 20,
+      "cost": 0.022
+    },
+    {
+      "query": "residential roofer Phoenix, AZ family owned",
+      "city": "Phoenix, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 21,
+      "cost": 0.022
+    },
+    {
+      "query": "roof replacement contractor Phoenix, AZ",
+      "city": "Phoenix, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 22,
+      "cost": 0.022
+    },
+    {
+      "query": "local roofing company near Phoenix, AZ",
+      "city": "Phoenix, AZ",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 20,
+      "cost": 0.022
+    },
+    {
+      "query": "roofing contractor in Austin, TX",
+      "city": "Austin, TX",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 17,
+      "cost": 0.022
+    },
+    {
+      "query": "roof repair company Austin, TX",
+      "city": "Austin, TX",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 16,
+      "cost": 0.022
+    },
+    {
+      "query": "residential roofer Austin, TX family owned",
+      "city": "Austin, TX",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 17,
+      "cost": 0.022
+    },
+    {
+      "query": "roof replacement contractor Austin, TX",
+      "city": "Austin, TX",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 17,
+      "cost": 0.022
+    },
+    {
+      "query": "local roofing company near Austin, TX",
+      "city": "Austin, TX",
+      "results": 25,
+      "own_sites": 25,
+      "own_sites_with_email": 16,
+      "cost": 0.022
+    }
+  ],
+  "hunter": []
+}

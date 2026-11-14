@@ -1,0 +1,5 @@
+# Seeds file: one company domain per line; lines starting with # are ignored.
+# Round 1 researches these instead of searching. Copy this file, add real domains for your city, then:
+#   outreach run "find me leads in Tucson that don't use AI" --seeds examples/my_seeds.txt
+roofer-a.example
+roofer-b.example

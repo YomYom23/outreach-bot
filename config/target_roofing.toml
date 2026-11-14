@@ -1,0 +1,89 @@
+# v1 TargetProfile: US roofing companies.
+
+industry = "roofing"
+
+query_templates = [
+    "roofing contractor in {city}",
+    "roof repair company {city}",
+    "residential roofer {city} family owned",
+    "roof replacement contractor {city}",
+]
+retry_query_templates = [
+    "local roofing company near {city}",
+    "{city} roofer free estimate",
+    "commercial roofing contractor {city}",
+]
+
+directory_blocklist = [
+    "yelp.com", "angi.com", "angieslist.com", "homeadvisor.com", "bbb.org", "yellowpages.com",
+    "thumbtack.com", "houzz.com", "nextdoor.com", "facebook.com", "instagram.com", "linkedin.com",
+    "mapquest.com", "manta.com", "porch.com", "buildzoom.com", "expertise.com", "threebestrated.com",
+    "superpages.com", "chamberofcommerce.com", "bark.com", "networx.com", "fixr.com", "homeguide.com",
+    "modernize.com", "roofingcontractor.com", "gaf.com", "owenscorning.com", "certainteed.com",
+    "reddit.com", "youtube.com", "google.com", "bing.com", "yahoo.com", "indeed.com", "glassdoor.com",
+    # Exa's own company-profile library (exa.ai/library/organization/...), returned with category=company.
+    "exa.ai",
+]
+
+# Matched against the public suffix of private PSL entries (see vendor_notes.md, tldextract).
+shared_host_patterns = [
+    "wixsite.com", "squarespace.com", "godaddysites.com", "weebly.com", "wordpress.com",
+    "business.site", "github.io", "webflow.io", "netlify.app", "vercel.app", "carrd.co",
+    "square.site", "jimdosite.com", "site123.me", "myshopify.com",
+]
+
+ai_tool_markers = [
+    { name = "Intercom", html_pattern = "widget.intercom.io|intercomcdn" },
+    { name = "Drift", html_pattern = "js.driftt.com|drift.com/include" },
+    { name = "Tidio", html_pattern = "code.tidio.co" },
+    { name = "LiveChat", html_pattern = "cdn.livechatinc.com" },
+    { name = "Podium", html_pattern = "connect.podium.com|podium-webchat" },
+    { name = "Birdeye", html_pattern = "birdeye.com/embed" },
+    { name = "HubSpot chat", html_pattern = "js.usemessages.com|hubspot.*conversations" },
+    { name = "Zendesk chat", html_pattern = "static.zdassets.com|zopim" },
+    { name = "Crisp", html_pattern = "client.crisp.chat" },
+    { name = "tawk.to", html_pattern = "embed.tawk.to" },
+    { name = "Chatbase", html_pattern = "chatbase.co/embed" },
+    { name = "Voiceflow", html_pattern = "cdn.voiceflow.com" },
+    { name = "GoHighLevel", html_pattern = "leadconnectorhq.com|msgsndr.com" },
+]
+
+link_keywords = ["about", "contact", "team", "our-story", "who-we-are", "owner", "company"]
+
+code_checks = ["no_ai_visible"]
+
+[code_check_phrases]
+no_ai_visible = ["don't use ai", "do not use ai", "no ai", "without ai", "not using ai", "no chatbot"]
+
+[default_checklist]
+threshold = 2
+items = [
+    { text = "No AI chat or automation tool is visible on the website", check = "code", code_check = "no_ai_visible" },
+    { text = "Owner-operated or family-owned business", check = "llm" },
+    { text = "Does residential roofing work", check = "llm" },
+]
+
+[lists]
+ownership_words = ["owner", "co-owner", "founder", "co-founder", "president", "ceo", "proprietor", "principal", "family-owned", "owned and operated"]
+role_local_parts = ["info", "owner", "contact", "office", "sales", "admin", "hello", "service", "estimates", "estimate", "support", "team", "roofing", "inquiries", "quotes", "help", "mail"]
+placeholder_addresses = ["example@example.com", "user@domain.com", "name@email.com", "your@email.com", "email@example.com", "you@yourdomain.com", "test@test.com"]
+vendor_denylist = ["sentry.io", "wixpress.com", "godaddy.com", "squarespace.com", "example.com", "domain.com", "sentry-next.wixpress.com"]
+file_extension_tlds = ["png", "jpg", "jpeg", "gif", "webp", "svg", "css", "js", "ico", "pdf"]
+vocabulary = ["Roofing", "Roof", "Speed", "Lead", "AI", "Hi", "Thanks", "Best", "Regards", "I", "We", "You", "Your"]
+
+[question_templates]
+extra_round = "Research rounds are used up and the target isn't met. Run one more research round? (yes/no)"
+change_city = "No new companies are turning up. Try a different city? Type a city name, or 'no'."
+lower_threshold = "Some leads missed by one point. Lower the threshold? Type a number from 1 to {max_n}, or 'no'."
+city = "Which US city should I search in?"
+sender_name = "What name should the emails be signed with?"
+business_name = "What is your business name?"
+call_to_action = "What should the email ask the reader to do? (for example, 'reply for a 15-minute call')"
+
+[sender]
+offer_text = """Two automations for roofing companies:
+- Speed to lead: every new web or phone inquiry gets a reply within minutes, day or night.
+- Document reading: details pulled automatically out of estimates, insurance claims and adjuster reports."""
+tone = "friendly, plain, no hype"
+max_words = 120
+signature_template = "{name}\n{business_name}"
