@@ -6,7 +6,7 @@ Python · LangGraph · Claude Opus 5.5 and Haiku 5.5 · Exa search · SQLite · 
 
 302 tests, ruff and mypy clean. A typical run costs about $0.11.
 
-<!-- Demo GIF goes here: docs/demo.gif, recorded from one real run (intake, review, Mailtrap inbox). -->
+![A real run: intake, plan, research, draft review and the Mailtrap inbox (company names blurred)](docs/demo.gif)
 
 ```bash
 outreach run "find me leads in Tucson that don't use AI"
