@@ -154,3 +154,7 @@ OUTREACH_LIVE=1 uv run pytest tests/live -s
 ## Windows note
 
 Antivirus HTTPS scanning (Norton here) breaks Python's TLS in two ways. `outreach/tls.py` handles both at startup: it uses the Windows trust store (`truststore`), and drops an `SSLKEYLOGFILE` that points at a named pipe.
+
+## License
+
+Copyright (c) 2026 Yomi Lebi. All rights reserved. This code is shared for viewing only; it may not be copied, modified or reused without permission.
