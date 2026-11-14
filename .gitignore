@@ -14,3 +14,6 @@ trace-*.txt
 # Real business domains for live demos; kept local, not published.
 examples/tucson_demo.txt
 examples/my_seeds.txt
+
+# Design review working files, kept local
+egm/

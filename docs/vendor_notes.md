@@ -143,7 +143,7 @@ Sources: [Trace with LangGraph](https://docs.langchain.com/langsmith/trace-with-
 
 ## Design changes needed (from the CHANGE rows)
 
-**Status: applied to `docs/designs/outreach_bot.md` on 2026-11-13**, and the `../egm/design_draft.md` mirror was regenerated. The edited places are: the Error policy rows for Hunter, the Rules note on Hunter fields, items 33 (`domains.py`), 44 (`exa_client`), 45 (`hunter_client`) and 46 (`mailer`), and the `[mail]` config row.
+**Status: applied to `docs/designs/outreach_bot.md` on 2026-11-13.** The edited places are: the Error policy rows for Hunter, the Rules note on Hunter fields, items 33 (`domains.py`), 44 (`exa_client`), 45 (`hunter_client`) and 46 (`mailer`), and the `[mail]` config row.
 
 1. **Hunter errors.**
    - Map `429` to `HunterQuotaError` before `tenacity` sees it.

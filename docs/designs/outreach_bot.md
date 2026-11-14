@@ -652,14 +652,7 @@ Structured output uses the `json_schema` method [verify in Task 0]. Each call si
 
 ### Additional Resources
 
-*   [concepts_brief.md](../../egm/concepts_brief.md) is the current brief, and [concepts_brief_history.md](../../egm/concepts_brief_history.md) is the round-by-round record.
-*   Goldfish reviews:
-    *   [goldfish_review_round1.md](../../egm/goldfish_review_round1.md)
-    *   [goldfish_review_section1.md](../../egm/goldfish_review_section1.md)
-    *   [goldfish_review_architecture.md](../../egm/goldfish_review_architecture.md)
-*   Stage 9 review:
-    *   round 1: [implementation_readiness_report_r1.md](../../egm/implementation_readiness_report_r1.md), resolved in [goldfish_review_stage9_r1.md](../../egm/goldfish_review_stage9_r1.md);
-    *   round 2: [implementation_readiness_report_r2.md](../../egm/implementation_readiness_report_r2.md), resolved in [goldfish_review_stage9_r2.md](../../egm/goldfish_review_stage9_r2.md).
+*   The concept brief and the review reports (three goldfish reviews, two implementation-readiness rounds) are kept outside the repository.
 *   [docs/architecture_supervisor_sketch.png](../architecture_supervisor_sketch.png) is Yomi's architecture sketch.
 
 ### Future Improvements
