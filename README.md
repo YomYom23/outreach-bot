@@ -93,6 +93,8 @@ All 302 tests run offline, with network access blocked. Fixture websites stand i
 
 I wrote the design before any code: goals, user journeys, alternatives, a data model and a phased build plan with an exit test for each phase. Then I ran several rounds of structured review against it. I checked every vendor claim against the real API before coding against it, and each phase ended with a live run whose findings went back into the design.
 
+This repo was built locally and published as a single commit on 14 Nov 2026, so the commit history doesn't show the build.
+
 ---
 
 ## Setup
