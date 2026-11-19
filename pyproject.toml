@@ -1,5 +1,5 @@
 [project]
-name = "outreach-bot"
+name = "outreach-agent"
 version = "0.1.0"
 description = "Supervisor-routed LangGraph agent that finds, qualifies and drafts outreach to local roofing companies (test inbox only)."
 readme = "README.md"

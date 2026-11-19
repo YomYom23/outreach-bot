@@ -1,4 +1,4 @@
-# Outreach Bot
+# Outreach Agent
 
 *   **Author:** Yomi
 *   **Status:** Approved (Stage 9 review accepted at round 2, 2026-11-13: round 1 had 8 Blockers and round 2 had 2, all fixed; the round-2 fixes have not been re-reviewed)
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Outreach Bot is a command-line program that runs a small, supervised cold-outreach pipeline. You type a request in plain English, for example "find me leads in Tucson that don't use AI". The program then:
+Outreach Agent is a command-line program that runs a small, supervised cold-outreach pipeline. You type a request in plain English, for example "find me leads in Tucson that don't use AI". The program then:
 
 1. finds roofing companies in that city on the web;
 2. checks each one against your criteria;
@@ -108,7 +108,7 @@ Off-the-shelf tools (lead databases, sequencers) would do most of this, but they
 ## Non-Goals
 
 *   **Other industries and countries.** v1 is US roofing only; free-form targets are v2. All roofer-specific values live in one `TargetProfile` file, so v2 is a config and intake change.
-*   **Real sending.** No email goes to a real company, and there is no production mail path. If the bot is ever used for real, approved drafts are exported to an established sending tool.
+*   **Real sending.** No email goes to a real company, and there is no production mail path. If the agent is ever used for real, approved drafts are exported to an established sending tool.
 *   **Compliance and deliverability work.** No CAN-SPAM footer, unsubscribe links, or SPF/DKIM/DMARC setup. These become requirements only if real sending is ever considered.
 *   **Follow-ups, reply handling, CRM sync, or a web UI.**
 *   **Business metrics** such as reply rate, and dollar budgets. Hard per-run limits stay in scope.
@@ -909,7 +909,7 @@ All paths are relative to the repository root `out-reach-bot/`. Every file is ne
     | Group | Keys (defaults) |
     |---|---|
     | Run limits | `target_qualified=4`, `max_research_rounds=3`, `batch_size=10`, `max_companies_examined_per_round=30`, `max_decisions=20`, `max_questions=3`, `max_exa_searches_per_round=8`, `exa_num_results=10`, `max_hunter_calls_per_run=5`, `rejected_retry_days=90` |
-    | Fetching | `extra_pages_per_company=3`, `page_text_chars=6000`, `snippet_chars=200`, `context_snippet_chars=200`, `max_redirects=5`, `connect_timeout_s=5`, `read_timeout_s=10`, `max_page_bytes=2000000`, `vendor_retry_attempts=3`, `per_host_delay_s=1.0`, `js_shell_min_chars=500`, `no_ai_min_ok_pages=2`, `user_agent="OutreachBot/0.1 (+https://github.com/<you>/out-reach-bot)"` (`config.py` refuses to start while it still contains `<you>`) |
+    | Fetching | `extra_pages_per_company=3`, `page_text_chars=6000`, `snippet_chars=200`, `context_snippet_chars=200`, `max_redirects=5`, `connect_timeout_s=5`, `read_timeout_s=10`, `max_page_bytes=2000000`, `vendor_retry_attempts=3`, `per_host_delay_s=1.0`, `js_shell_min_chars=500`, `no_ai_min_ok_pages=2`, `user_agent="OutreachAgent/0.1 (+https://github.com/<you>/outreach-agent)"` (`config.py` refuses to start while it still contains `<you>`) |
     | Models | `model_bulk="claude-haiku-5-5"`, `model_quality="claude-opus-5-5"`, `llm_validation_retries=1`, `anthropic_max_retries=2` |
     | `[effort]` | `parse="low"`, `discovery="low"`, `triage="low"`, `judge="medium"`, `checklist="medium"`, `router="medium"`, `drafter="medium"` |
     | `[max_tokens]` | `parse=4000`, `discovery=8000`, `triage=2000`, `judge=8000`, `checklist=8000`, `router=8000`, `drafter=16000`. Adjusted from the Task 0 measurements. |

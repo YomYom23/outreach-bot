@@ -66,7 +66,7 @@ class Settings(BaseModel):
     per_host_delay_s: float = 1.0
     js_shell_min_chars: int = 500
     no_ai_min_ok_pages: int = 2
-    user_agent: str = "OutreachBot/0.1 (+https://github.com/YomYom23/out-reach-bot)"
+    user_agent: str = "OutreachAgent/0.1 (+https://github.com/YomYom23/outreach-agent)"
     # models
     model_bulk: str = "claude-haiku-5-5"
     model_quality: str = "claude-sonnet-5-5"

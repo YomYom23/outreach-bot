@@ -1015,7 +1015,7 @@ wheels = [
 ]
 
 [[package]]
-name = "outreach-bot"
+name = "outreach-agent"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

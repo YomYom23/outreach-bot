@@ -44,7 +44,7 @@ def _live_sockets(request: pytest.FixtureRequest) -> Iterator[None]:
 def make_settings(tmp_path: Path, **overrides: object) -> Settings:
     base: dict[str, object] = {
         "testing": True,
-        "user_agent": "OutreachBot/0.1 (+https://github.com/test/out-reach-bot)",
+        "user_agent": "OutreachAgent/0.1 (+https://github.com/test/outreach-agent)",
         "runs_db_path": tmp_path / "runs.db",
         "memory_db_path": tmp_path / "memory.db",
         "model_prices": {"claude-haiku-5-5": ModelPrice(input=0.10, output=0.50),

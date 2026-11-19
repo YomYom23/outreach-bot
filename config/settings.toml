@@ -26,7 +26,7 @@ per_host_delay_s = 1.0
 js_shell_min_chars = 500
 no_ai_min_ok_pages = 2
 # config.py refuses to start while this still contains <you>.
-user_agent = "OutreachBot/0.1 (+https://github.com/YomYom23/out-reach-bot)"
+user_agent = "OutreachAgent/0.1 (+https://github.com/YomYom23/outreach-agent)"
 
 [models]
 model_bulk = "claude-haiku-5-5"

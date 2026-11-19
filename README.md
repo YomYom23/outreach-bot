@@ -1,4 +1,4 @@
-# Outreach Bot
+# Outreach Agent
 
 A LangGraph agent that finds local roofing companies, checks each one against a checklist you write, drafts a cold email for each match, and waits for you to approve every draft before anything is sent. Mail goes to a Mailtrap test inbox only.
 
@@ -79,7 +79,7 @@ Haiku handles parsing, triage, company checks and checklist scoring. Opus handle
 The plan didn't predict most of these; live runs found them. The full log is in [docs/vendor_notes.md](docs/vendor_notes.md).
 
 - Adding `exa.ai` to Exa's `excludeDomains` list cut search results from 10 to 1 or 2, with no error. Every real run for a whole phase would have found almost nobody. The client now strips it before sending.
-- At intake I answered a question with "what do you mean", the bot saved that as my name, and it signed every email with it. Free-text answers now go through Haiku first. If the reply is a question, the bot answers it and asks again.
+- At intake I answered a question with "what do you mean", the agent saved that as my name, and it signed every email with it. Free-text answers now go through Haiku first. If the reply is a question, the agent answers it and asks again.
 - The researcher saved the company name one level deep, and the drafter read it from the top level. The canned test data used the flat shape, so no test caught it, and live drafts named the domain instead of the company.
 - LangSmith tracing turned itself off. A check that disables tracing when no key is set ran before `.env` was loaded, so it never saw the key. Later, LangSmith's own setup steps added a second destination variable, and the SDK then dropped every trace with only a logged warning. Both are fixed, with a regression test for the first.
 
